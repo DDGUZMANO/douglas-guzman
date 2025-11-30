@@ -1,0 +1,200 @@
+<!--
+  Archivo: index.html
+  Plantilla de CV en HTML + CSS lista para subir a GitHub Pages.
+  Instrucciones rápidas:
+    1) Edita los datos (nombre, contacto, experiencia, proyectos...) dentro de este archivo.
+    2) Si quieres cambiar colores, modifica las variables CSS en :root.
+    3) Para publicar en GitHub Pages: crea un repo (ej: github.com/tuusuario/tuusuario.github.io), sube este index.html a la rama main y GitHub Pages publicará la web en https://tuusuario.github.io
+
+  Comentarios: archivo autocontenido (HTML + CSS). Sustituye las secciones marcadas con <!-- EDIT -->
+-->
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Douglas Domingo Guzmán Orence — CV</title>
+  <meta name="description" content="Currículum de Douglas Guzmán — Ingeniero / Desarrollador / Perfil profesional">
+
+  <style>
+    :root{
+      --bg: #0f1724;
+      --card: #0b1220;
+      --accent: #06b6d4;
+      --muted: #94a3b8;
+      --glass: rgba(255,255,255,0.04);
+      --radius: 12px;
+      --maxw: 900px;
+      --pad: 20px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color-scheme: dark;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: linear-gradient(180deg,#071023 0%, #071827 60%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:40px 20px;display:flex;justify-content:center;align-items:flex-start;line-height:1.4;
+    }
+
+    .container{width:100%;max-width:var(--maxw)}
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      padding:var(--pad);
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+      display:grid;grid-template-columns: 260px 1fr;gap:20px;align-items:start;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+
+    /* SIDEBAR */
+    .sidebar{background:transparent;padding:10px;border-radius:10px}
+    .photo{width:100%;height:260px;border-radius:10px;overflow:hidden;background:linear-gradient(135deg,var(--glass), rgba(255,255,255,0.01));display:flex;align-items:center;justify-content:center}
+    .photo img{width:100%;height:100%;object-fit:cover}
+    h1{font-size:22px;margin:12px 0 4px}
+    h2{font-size:13px;margin:8px 0;color:var(--muted);font-weight:600}
+    .muted{color:var(--muted);font-size:14px}
+
+    .contact{margin-top:12px;font-size:14px}
+    .contact p{margin:6px 0}
+    .tag{display:inline-block;padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:999px;margin:6px 6px 0 0;font-size:13px}
+
+    /* MAIN */
+    .main{padding:8px 6px}
+    .section{margin-bottom:18px}
+    .section h3{margin:0 0 8px;font-size:15px}
+
+    .summary{background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:8px}
+
+    .skill-list{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:8px;font-size:13px}
+
+    .job{padding:10px;border-radius:8px;background:rgba(255,255,255,0.015);margin-bottom:10px}
+    .job h4{margin:0;font-size:14px}
+    .job .meta{font-size:13px;color:var(--muted);margin:4px 0}
+    .job p{margin:6px 0 0;font-size:14px;color:#dfeaf6}
+
+    .projects{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .project{padding:10px;border-radius:8px;background:rgba(255,255,255,0.015)}
+
+    footer{margin-top:8px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* Responsive */
+    @media (max-width:800px){
+      .card{grid-template-columns:1fr;}
+      .photo{height:200px}
+      .projects{grid-template-columns:1fr}
+    }
+
+    /* Print */
+    @media print{
+      body{background:white;color:black}
+      .card{box-shadow:none;border:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="photo">
+          <!-- EDIT: Reemplaza src con tu foto o elimina la etiqueta <img> para no mostrar foto -->
+          <img src="https://via.placeholder.com/400x400.png?text=Foto+Tu+Nombre" alt="Foto">
+        </div>
+
+        <!-- EDIT: Cambia el nombre y el título -->
+        <h1>Nombre Apellido</h1>
+        <h2>Ingeniero de Petróleo · Data Enthusiast</h2>
+
+        <div class="contact">
+          <!-- EDIT: datos de contacto -->
+          <p class="muted">📍 Sevilla, España</p>
+          <p>✉️ <a href="mailto:tu@correo.com">tu@correo.com</a></p>
+          <p>🔗 <a href="https://github.com/tuusuario" target="_blank">github.com/tuusuario</a></p>
+          <p>📱 +34 600 000 000</p>
+        </div>
+
+        <div style="margin-top:12px">
+          <div class="tag">Disponibilidad: Inmediata</div>
+          <div class="tag">Permiso de conducir: B</div>
+        </div>
+
+        <div style="margin-top:14px">
+          <h3 style="font-size:13px;margin-bottom:8px">Habilidades</h3>
+          <div class="skill-list">
+            <div class="skill">Python</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Power BI</div>
+            <div class="skill">Machine Learning</div>
+            <div class="skill">Docker</div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- MAIN -->
+      <main class="main">
+        <section class="section summary">
+          <h3>Resumen</h3>
+          <p><!-- EDIT: Escribe 2-3 líneas breves y potentes sobre tu perfil profesional -->
+            Ingeniero con experiencia técnica y formación en ciencia de datos. Busco oportunidades en el sector energético donde aplicar análisis de datos, modelado y visualización para optimizar procesos y soporte a decisiones.
+          </p>
+        </section>
+
+        <section class="section">
+          <h3>Experiencia</h3>
+
+          <article class="job">
+            <h4>Nombre empresa — Ingeniero de Campo</h4>
+            <div class="meta">Jun 2018 — Presente · Sevilla</div>
+            <p>Responsable de supervisión de equipos, planificación y ejecución de trabajos, optimización de procesos y coordinación con clientes. LOGROS: reducción de tiempos, mejora en seguridad.</p>
+          </article>
+
+          <article class="job">
+            <h4>Otra empresa — Puesto anterior</h4>
+            <div class="meta">Ene 2015 — May 2018 · Sevilla</div>
+            <p>Descripción breve de responsabilidades y logros cuantificables.</p>
+          </article>
+        </section>
+
+        <section class="section">
+          <h3>Proyectos destacados</h3>
+          <div class="projects">
+            <div class="project">
+              <strong>Proyecto A</strong>
+              <p class="muted">Data analysis · Python</p>
+              <p>Breve descripción: dataset, objetivo y resultado (por ejemplo: ahorros de X%).</p>
+            </div>
+            <div class="project">
+              <strong>Dashboard Energía</strong>
+              <p class="muted">Power BI</p>
+              <p>Dashboard con métricas clave para seguimiento de consumo y alertas.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h3>Formación</h3>
+          <p class="muted">Máster en Ciencia de Datos — Universidad Ejemplo (2022)</p>
+          <p class="muted">Ingeniería de Petróleo — Universidad (2013)</p>
+        </section>
+
+        <section class="section">
+          <h3>Idiomas</h3>
+          <p>Español (nativo) · Inglés (fluido) · Portugués (básico)</p>
+        </section>
+
+        <footer>
+          Última actualización: Nov 2025 · <span class="muted">Generado con plantilla HTML</span>
+        </footer>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
